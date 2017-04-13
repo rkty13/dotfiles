@@ -1,0 +1,13 @@
+# Setting PATH for Python 3.4
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.6
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# Setting PATH for TeX
+PATH="/usr/texbin:${PATH}"
+export PATH
+
+
