@@ -9,5 +9,3 @@ export PATH
 # Setting PATH for TeX
 PATH="/usr/texbin:${PATH}"
 export PATH
-
-

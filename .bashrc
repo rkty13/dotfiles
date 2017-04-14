@@ -1,10 +1,14 @@
-export CLICOLOR=1
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+# Taken from https://github.com/mathiasbynens/dotfiles
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,completion,bash_prompt}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
-export PS1="\[$(tput setaf 2; tput bold)\]λ\[$(tput setaf 7)\]: \[$(tput sgr0)\]"
-# export PS1="\h:\W \u\$"
-
-screenfetch -t
+[[ -s ~/.golang ]] && source ~/.golang
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # added by travis gem
-[ -f /Users/robertkim/.travis/travis.sh ] && source /Users/robertkim/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
